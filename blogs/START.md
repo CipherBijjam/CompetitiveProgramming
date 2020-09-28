@@ -21,3 +21,11 @@
 
 ### OTHER
 * Sets, Logarithms, Logical Operators, Functions
+
+## SEP 28
+* Time complexity of algorithms is measured with input size as the parameter. This is because normal time in seconds depedns on a lot of factors such as Speed of your computer, compilers efficiency, etc. Using input size as the parameter helps us to identify the complexity of the algorithm even before implementing it.
+* Generally for a CPP code, 1s translates to 10^7 operations ( sometimes even 10^8 ).
+* We can represent the efficiency of a an algorithm using the asymptotic notation ( parameter size of input ). This is only an estimate of the efficiency. We remove the constants in this notation. Sometimes even the constants can play a huge role.
+* This kind of analysis of algorithms using input size as parameter is called asymptotic analysis.
+* The time complexity of a recursive function is basically the O(no of function calls * time complexity of each function).
+
