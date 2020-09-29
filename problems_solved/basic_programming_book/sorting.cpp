@@ -17,6 +17,22 @@ using namespace std;
 // Compiling command
 // g++ -02 -Wall <question_name>.cpp -o <question_name>
 
+typedef struct Node{
+    int a, b;
+    // Comparison operator
+    bool operator<(const Node &node){
+        if(a < node.a) return 1;
+        else if(a == node.a && b < node.b) return 1;
+        return 0;
+    }
+}Node;
+
+bool comparison_function(Node x, Node y){
+    if(x.a < y.a) return 1;
+    else if(x.a == y.a && x.b < y.b) return 1;
+    return 0;
+}
+
 void swap(int *a, int *b){
     int temp = *a;
     *a = *b;
@@ -45,7 +61,7 @@ void selection_sort(vector <int> &arr){
     int N = sz(arr);
     for(int i = 0; i < N; i++){
         int mini = i;
-        for(int j = i; j < N; j++){
+        for(int j = i + 1; j < N; j++){
             if(arr[mini] > arr[j]) mini = j;
         }
         if(i != mini) swap(&arr[i], &arr[mini]);
@@ -105,6 +121,7 @@ int main(int argc, char const *argv[]){
     // bubble_sort(req);
     // merge_sort(req, 0, N - 1);
     // selection_sort(req);
+    // sort(req1.begin(), req1.end(), comparison_function);
     insertion_sort(req);
     for(int i = 0; i < N; i++) cout << req[i] << " ";
     cout << endl;

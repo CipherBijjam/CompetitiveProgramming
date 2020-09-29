@@ -29,3 +29,11 @@
 * This kind of analysis of algorithms using input size as parameter is called asymptotic analysis.
 * The time complexity of a recursive function is basically the O(no of function calls * time complexity of each function).
 
+## SEP 29
+* Sorting is a fundamental algorithm design problem. It is used in may algorithms as a sub-function. This is because in many cases processing a sorted array is much easier.
+* Two methods:
+	* Comparing Elements
+		* Swapping Consecutive - O(n^2) - Concept of Inversions
+		* Non-Consecutive Swapping - Can be done in O(n*logn)
+	* Book Keeping of elements - O(n + C), C is the maximum element in the array.
+* We can use inbuilt sorting algorithm. These save us a lot of time. Every data structure requires a comparison operator to sort the array. For built-in data structure they are already present. But for User-defined Structs we need to write them explicitly. Or we can use comparison functions.
