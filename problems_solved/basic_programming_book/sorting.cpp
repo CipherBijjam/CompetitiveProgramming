@@ -27,6 +27,7 @@ typedef struct Node{
     }
 }Node;
 
+// Comparison function which is to be sent as parameter in inbuilt function
 bool comparison_function(Node x, Node y){
     if(x.a < y.a) return 1;
     else if(x.a == y.a && x.b < y.b) return 1;
